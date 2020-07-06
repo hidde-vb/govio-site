@@ -1,10 +1,27 @@
-<html>
-    <head>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
         <title>Govio</title>
+        
+        <!-- Temporary, change the mails to redirect to the /admin page -->
+        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
 
     <body>
         <h1>Govio: The website</h1>
         {{ content | safe}}
+        <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+        </script>
     </body>
 </html>
