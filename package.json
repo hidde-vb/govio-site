@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "gulp wath & eleventy --serve"
+    "serve": "gulp watch & eleventy --serve"
   },
   "keywords": [],
   "author": "",
