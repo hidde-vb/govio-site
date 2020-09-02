@@ -1,33 +1,33 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-        <title>Govio</title>
-        
-        <style>{% include "base.css" %}</style>
-        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </head>
+    <meta charset="utf-8">
+    <title>Govio</title>
 
-    <body>
-        {{ content | safe}}
+    <style>
+        {
+            % include "base.css"%
+        }
+    </style>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
 
-        <div class="tiles">
-            <div class="tile tile-wildgroei"><a href="/pages/wildgroei">wildgroei</a></div>
-            <div class="tile tile-govio"><a href="/pages/govio">govio</a></div>
-            <div class="tile tile-kroe"><a href="/pages/kroe">kroe</a></div>
-        </div>
-        
-        <script>
+<body>
+    {{ content | safe}}
+
+    <script>
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-                });
-            }
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
             });
         }
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
