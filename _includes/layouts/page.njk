@@ -1,15 +1,15 @@
-<!doctype html>
+---
+layout: layouts/base.njk
+---
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-        <title>Wildgroei</title>
-        <style>{% include "wildgroei.css" %}</style>
-    </head>
+<header>
+    a header
+</header>
 
-    <body>
-        <h1>Wildgroei</h1>
+<main>
+    {{content | safe}}
+</main>
 
-        <p>{{ content | safe}}</p>
-    </body>
-</html>
+<footer>
+    a footer
+</footer>

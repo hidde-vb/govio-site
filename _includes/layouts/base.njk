@@ -6,28 +6,12 @@
     <meta charset="utf-8">
     <title>Govio</title>
 
-    <style>
-        {
-            % include "base.css"%
-        }
-    </style>
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
     {{ content | safe}}
-
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>

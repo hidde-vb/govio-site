@@ -2,14 +2,14 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 
 gulp.task('sass', function () {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('css/**/*.scss')
         .pipe(sass({
                 outputStyle: 'compressed'
             })
             .on('error', sass.logError))
-        .pipe(gulp.dest('./_includes'));
+        .pipe(gulp.dest('./_site/css'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('css/**/*.scss', gulp.series('sass'));
 })
