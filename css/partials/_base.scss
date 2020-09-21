@@ -1,6 +1,14 @@
 $text-color: #111;
 $background-color: #eee;
 
-$main-color: #111;
-$secondary-color: #ff1111;
-$tertiary-color: #af151c;
+$primary-color: #ff1111;
+$secondary-color: #af151c;
+
+$jumbo-color: #111;
+
+// Layout
+$break-big: 1200px;
+$break-small: 950px;
+$break-mobile: 600px;
+
+$spacing: 8px;

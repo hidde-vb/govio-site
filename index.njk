@@ -3,4 +3,24 @@ layout: layouts/page.njk
 permalink: /
 ---
 
-<h1>The title of the page</h1>
+<div class="jumbotron">
+    <img src="./images/logo/logo-circle.png" alt="Logo" class="logo">
+</div>
+
+<div class="quicknav">
+    <a href="">
+        <div class="button">Materiaal huren</div>
+    </a>
+    <a href="">
+        <div class="button">Lid worden</div>
+    </a>
+</div>
+
+<div class="section">
+    <h2>Posts</h2>
+    {% set postslist = collections.posts %}
+    {% include "postslist.njk" %}
+    <a href="">
+        <div class="button">+ Meer laden</div>
+    </a>
+</div>

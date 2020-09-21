@@ -1,4 +1,22 @@
+html,
 body {
+  margin: 0;
   padding: 0;
   background-color: $background-color;
+}
+
+.jumbotron {
+  display: flex;
+  height: 80vh;
+
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    max-width: 400px;
+    margin: 25px;
+  }
+
+  color: $primary-color;
+  background-color: $jumbo-color;
 }
